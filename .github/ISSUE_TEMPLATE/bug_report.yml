@@ -1,0 +1,58 @@
+name: Reportar un bug
+description: Algo no funciona como debería
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar el bug. Para poder revisarlo, **el navegador y una captura de pantalla o vídeo son obligatorios**.
+  - type: textarea
+    id: description
+    attributes:
+      label: ¿Qué ha pasado?
+      description: Describe el problema y qué esperabas que ocurriera.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      description: Cuéntanos paso a paso cómo llegar al error.
+      placeholder: |
+        1. Ir a...
+        2. Hacer clic en...
+        3. Ver el error
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Navegador
+      description: ¿En qué navegador ocurre el problema?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Brave
+        - Opera
+        - Arc
+        - Otro
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Versión del navegador
+      description: "Puedes verla en el menú del navegador, en «Acerca de». Ejemplo: 130.0.6723"
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Captura de pantalla o vídeo
+      description: Arrastra aquí una imagen o un vídeo donde se vea el problema, o pégalo con Ctrl + V / Cmd + V. Sin esto no podremos revisar el issue.
+      placeholder: Arrastra o pega aquí tu captura de pantalla o vídeo
+    validations:
+      required: true
