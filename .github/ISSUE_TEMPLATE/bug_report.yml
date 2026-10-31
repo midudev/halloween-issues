@@ -49,6 +49,14 @@ body:
     validations:
       required: true
   - type: textarea
+    id: system
+    attributes:
+      label: Información del juego y del equipo
+      description: Si abres el issue desde «Informar de un problema» en el juego, se rellena sola (versión, navegador, sistema, gráficos, en qué punto de la noche estás y los últimos errores). Déjala tal cual.
+      render: text
+    validations:
+      required: false
+  - type: textarea
     id: media
     attributes:
       label: Captura de pantalla o vídeo
